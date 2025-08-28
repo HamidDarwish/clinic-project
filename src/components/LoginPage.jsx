@@ -29,11 +29,11 @@ const LoginPage = () => {
     <div className="login-container">
       <header className="navbar">
         <div className="logo">
-          <h2>HealthHub Clinic</h2>
+          <h2>Healtcare Clinic</h2>
         </div>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/login" className="active">Admin Portal</Link>
+          <Link to="/login" className="active">Dashboard</Link>
         </div>
       </header>
       
@@ -43,7 +43,7 @@ const LoginPage = () => {
             <div className="login-quote">
               <div className="quote-icon">❞</div>
               <h2>Admin Dashboard Access</h2>
-              <p>Manage clinic data, patient records, and appointments through our secure admin portal.</p>
+              <p>Manage clinic data, patient records, and appointments through our secure admin Dashboard.</p>
               <div className="features-list">
                 <div className="feature-item">
                   <div className="feature-icon">✓</div>
@@ -109,18 +109,18 @@ const LoginPage = () => {
               <button type="submit" className="login-button">Access Dashboard</button>
             </form>
             
-            <div className="login-footer">
+            {/* <div className="login-footer">
               <p className="help-text">For technical support, please contact the IT department</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       
-      <footer className="login-page-footer">
+      {/* <footer className="login-page-footer">
         <div className="copyright">
-          <p>&copy; 2023 HealthHub Clinic. All rights reserved.</p>
+          <p>&copy; 2025 Healtcare Clinic. All rights reserved.</p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

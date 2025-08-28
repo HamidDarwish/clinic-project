@@ -7,11 +7,11 @@ const HomePage = () => {
     <div className="home-container">
       <header className="navbar">
         <div className="logo">
-          <h2>HealthHub Clinic</h2>
+          <h2>Healtcare Clinic</h2>
         </div>
         <div className="nav-links">
           <Link to="/" className="active">Home</Link>
-          <Link to="/login" className="nav-login-btn">Admin Portal</Link>
+          <Link to="/login" className="nav-login-btn">Dashboard</Link>
         </div>
       </header>
       
@@ -41,7 +41,7 @@ const HomePage = () => {
       
       <footer className="home-footer">
         <div className="copyright">
-          <p>&copy; 2023 HealthHub Clinic. All rights reserved.</p>
+          <p>&copy; 2025 Healthcare Clinic. All rights reserved.</p>
         </div>
       </footer>
     </div>
