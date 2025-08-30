@@ -1,49 +1,119 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 const HomePage = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'services'];
+      const scrollPosition = window.scrollY + 100;
+
+      sections.forEach(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="home-container">
       <header className="navbar">
         <div className="logo">
-          <h2>Healtcare Clinic</h2>
+          <h2>Healthcare Clinic</h2>
         </div>
-        <div className="nav-links">
-          <Link to="/" className="active">Home</Link>
-          <Link to="/login" className="nav-login-btn">Dashboard</Link>
-        </div>
+        <nav className="nav-links">
+          <button 
+            onClick={() => scrollToSection('home')} 
+            className={activeSection === 'home' ? 'active' : ''}
+          >
+            Home
+          </button>
+ 
+          <Link to="/login" className="nav-login-btn">Login As Admin</Link>
+        </nav>
       </header>
       
-      <div className="hero-section">
+      {/* Hero Section */}
+      <section id="home" className="hero-section">
         <div className="hero-content">
-          <span className="hero-badge">Modern Healthcare Solutions</span>
-          <h1>Your Health Journey <span className="accent-text">Starts Here</span></h1>
-          <p>Experience personalized care with cutting-edge medical technology and compassionate professionals</p>
+          <div className="hero-badge">
+            <span className="badge-icon">❤️</span>
+            Clinic Management System
+          </div>
+          <h1>
+            Welcome to the Clinic
+            <span className="accent-text"> Dashboard</span>
+          </h1>
+          <p>
+            This platform is designed to help administrators manage patient records, appointments, and reports with ease.
+          </p>
           <div className="hero-buttons">
-            <Link to="/login" className="btn btn-primary">Access Admin Dashboard</Link>
+            <button onClick={() => scrollToSection('services')} className="btn btn-primary">
+              Access Admin Dashboard
+            </button>
+            {/* <button onClick={() => scrollToSection('contact')} className="btn btn-secondary">
+              Book Appointment
+            </button> */}
+          </div>
+          {/* <div className="hero-stats">
+            <div className="stat">
+              <span className="stat-number">15+</span>
+              <span className="stat-label">Years Experience</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">5000+</span>
+              <span className="stat-label">Happy Patients</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">24/7</span>
+              <span className="stat-label">Emergency Care</span>
+            </div>
+          </div> */}
+        </div>
+        <div className="hero-visual">
+          <div className="hero-image">
+            {/* <div className="floating-element element-1">
+              <div className="element-icon">🩺</div>
+              <span>Expert Care</span>
+            </div> */}
+            {/* <div className="floating-element element-2">
+              <div className="element-icon">💊</div>
+              <span>Modern Treatment</span>
+            </div> */}
+            {/* <div className="floating-element element-3">
+              <div className="element-icon">❤️</div>
+              <span>Compassionate</span>
+            </div> */}
+
+            
+          </div>
+          <div className="floating-element element-1">
+            <div className="element-icon">
+              <p>Secure and reliable access to clinic data.</p>
+            </div>
+            {/* <span>Expert Care</span> */}
           </div>
         </div>
-        <div className="hero-image">
-          <div className="image-container">
-            <div className="floating-card card-1">
-              <div className="card-icon">✓</div>
-              <div className="card-text">Expert Doctors</div>
-            </div>
-            <div className="floating-card card-2">
-              <div className="card-icon">♥</div>
-              <div className="card-text">Patient-Centered Care</div>
-            </div>
-            <div className="main-image">Medical Team Image</div>
-          </div>
-        </div>
-      </div>
-      
-      <footer className="home-footer">
-        <div className="copyright">
-          <p>&copy; 2025 Healthcare Clinic. All rights reserved.</p>
-        </div>
-      </footer>
+      </section>
     </div>
   );
 };

@@ -1,0 +1,25 @@
+/* Modern Dashboard Layout */
+.modern-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #181c24;
+  color: #e5e7eb;
+}
+
+.modern-dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #23272f;
+  min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .modern-dashboard-layout {
+    flex-direction: column;
+  }
+  .modern-dashboard-main {
+    min-width: 100vw;
+  }
+}

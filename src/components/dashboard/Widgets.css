@@ -1,0 +1,25 @@
+/* Widgets Styles */
+.widgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+.widget-card {
+  background: #23272f;
+  color: #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(72,144,255,0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.widget-label {
+  font-size: 1rem;
+  color: #38c6fa;
+}
+.widget-value {
+  font-size: 2rem;
+  font-weight: bold;
+}

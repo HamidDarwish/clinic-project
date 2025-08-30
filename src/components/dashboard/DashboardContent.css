@@ -1,0 +1,29 @@
+/* Dashboard Content Styles */
+.dashboard-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.dashboard-actions button {
+  background: #38c6fa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.dashboard-actions button:hover {
+  background: #4f8cff;
+}

@@ -6,30 +6,35 @@ const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [redirect, setRedirect] = useState(null);
+
+  // Example credentials
+  const credentials = {
+    admin: { password: 'admin123', type: 'full' },
+    ali: { password: 'ali123', type: 'limited' },
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Basic validation
     if (!username || !password) {
       setError('Please fill in all fields');
       return;
     }
-    
-    // Here you would typically handle the login logic
-    console.log('Login attempt with:', { username, password });
-    
-    // Reset form
-    setUsername('');
-    setPassword('');
-    setError('');
+    if (credentials[username] && credentials[username].password === password) {
+      // Redirect to dashboard based on admin type
+      setRedirect(`/dashboard/${credentials[username].type}`);
+      setError('');
+    } else {
+      setError('Invalid username or password');
+    }
   };
 
   return (
     <div className="login-container">
+      {redirect && window.location.replace(redirect)}
       <header className="navbar">
         <div className="logo">
-          <h2>Healtcare Clinic</h2>
+          <h2>Healthcare Clinic</h2>
         </div>
         <div className="nav-links">
           <Link to="/">Home</Link>

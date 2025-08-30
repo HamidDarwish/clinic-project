@@ -1,0 +1,54 @@
+/* DataTable Styles */
+.datatable-section {
+  background: #23272f;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(72,144,255,0.08);
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.datatable-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.datatable-header input {
+  background: #181c24;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+.datatable-header button {
+  background: #38c6fa;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.datatable-header button:hover {
+  background: #4f8cff;
+}
+.datatable-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.datatable-table th, .datatable-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #2d323c;
+  text-align: left;
+}
+.datatable-table th {
+  background: #181c24;
+  color: #38c6fa;
+  font-weight: 700;
+}
+.datatable-table tr:last-child td {
+  border-bottom: none;
+}

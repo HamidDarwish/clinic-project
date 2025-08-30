@@ -1,0 +1,158 @@
+/* Modern Dashboard Styles */
+.dashboard-modern {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: #f6f8fa;
+	min-height: 100vh;
+	padding: 0;
+}
+
+.dashboard-header {
+	background: linear-gradient(90deg, #4f8cff 0%, #38c6fa 100%);
+	color: #fff;
+	padding: 2rem 2rem 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.admin-type {
+	font-size: 1.1rem;
+	background: #fff;
+	color: #38c6fa;
+	padding: 0.4rem 1rem;
+	border-radius: 20px;
+	font-weight: 600;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.dashboard-controls {
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0;
+}
+
+.add-entry-card {
+	background: #fff;
+	padding: 2rem;
+	border-radius: 16px;
+	box-shadow: 0 2px 16px rgba(72, 144, 255, 0.08);
+	min-width: 320px;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.add-entry-card h2 {
+	margin-bottom: 0.5rem;
+	color: #4f8cff;
+}
+
+.add-entry-card input {
+	padding: 0.7rem;
+	border: 1px solid #dbeafe;
+	border-radius: 8px;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.add-entry-card button {
+	background: linear-gradient(90deg, #4f8cff 0%, #38c6fa 100%);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 0.7rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.add-entry-card button:hover {
+	background: #38c6fa;
+}
+
+.dashboard-table-section {
+	margin: 2rem auto;
+	max-width: 900px;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 2px 16px rgba(72, 144, 255, 0.08);
+	padding: 2rem;
+}
+
+.dashboard-table-section h2 {
+	color: #4f8cff;
+	margin-bottom: 1rem;
+}
+
+.dashboard-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1rem;
+}
+.dashboard-table th, .dashboard-table td {
+	padding: 0.8rem 1rem;
+	border-bottom: 1px solid #e5e7eb;
+	text-align: left;
+}
+.dashboard-table th {
+	background: #f0f7ff;
+	color: #4f8cff;
+	font-weight: 700;
+}
+.dashboard-table tr:last-child td {
+	border-bottom: none;
+}
+.dashboard-table input {
+	padding: 0.5rem;
+	border: 1px solid #dbeafe;
+	border-radius: 6px;
+	font-size: 1rem;
+}
+.dashboard-table button {
+	margin-right: 0.5rem;
+	background: #4f8cff;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 0.4rem 0.8rem;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.dashboard-table button:hover {
+	background: #38c6fa;
+}
+.dashboard-table button:disabled {
+	background: #dbeafe;
+	color: #a1a1aa;
+	cursor: not-allowed;
+}
+
+.dashboard-extra-controls {
+	margin: 2rem auto;
+	max-width: 900px;
+	background: #e0f2fe;
+	border-radius: 12px;
+	padding: 1.5rem;
+	color: #2563eb;
+	box-shadow: 0 1px 8px rgba(72, 144, 255, 0.06);
+}
+
+@media (max-width: 700px) {
+	.dashboard-table-section, .dashboard-extra-controls {
+		padding: 1rem;
+		max-width: 100%;
+	}
+	.dashboard-header {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem;
+	}
+	.add-entry-card {
+		min-width: 100%;
+		max-width: 100%;
+		padding: 1rem;
+	}
+}

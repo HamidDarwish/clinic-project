@@ -1,0 +1,29 @@
+/* Activity Panel Styles */
+.activity-panel {
+  background: #23272f;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(72,144,255,0.08);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+.activity-panel h3 {
+  color: #38c6fa;
+  margin-bottom: 1rem;
+}
+.activity-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.activity-panel li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #2d323c;
+}
+.activity-panel li:last-child {
+  border-bottom: none;
+}
+.log-query { color: #38c6fa; }
+.log-backup { color: #4f8cff; }
+.log-alert { color: #f87171; }
+.log-time { font-size: 0.9rem; margin-right: 0.5rem; color: #a1a1aa; }
