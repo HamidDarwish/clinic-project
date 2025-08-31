@@ -48,7 +48,7 @@ const HomePage = () => {
             Home
           </button>
  
-          <Link to="/login" className="nav-login-btn">Login As Admin</Link>
+          <Link to="/login" className="nav-login-btn">Login</Link>
         </nav>
       </header>
       
@@ -67,27 +67,9 @@ const HomePage = () => {
             This platform is designed to help administrators manage patient records, appointments, and reports with ease.
           </p>
           <div className="hero-buttons">
-            <button onClick={() => scrollToSection('services')} className="btn btn-primary">
-              Access Admin Dashboard
-            </button>
-            {/* <button onClick={() => scrollToSection('contact')} className="btn btn-secondary">
-              Book Appointment
-            </button> */}
+            
+            <Link to="/login" className="nav-login-btn">Access Admin Dashboard</Link>
           </div>
-          {/* <div className="hero-stats">
-            <div className="stat">
-              <span className="stat-number">15+</span>
-              <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">5000+</span>
-              <span className="stat-label">Happy Patients</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">24/7</span>
-              <span className="stat-label">Emergency Care</span>
-            </div>
-          </div> */}
         </div>
         <div className="hero-visual">
           <div className="hero-image">
@@ -110,7 +92,6 @@ const HomePage = () => {
             <div className="element-icon">
               <p>Secure and reliable access to clinic data.</p>
             </div>
-            {/* <span>Expert Care</span> */}
           </div>
         </div>
       </section>
